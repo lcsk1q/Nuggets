@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Discord / Nuggets Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2b2d31;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1b1e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #111214;
+}
+
+/* Custom animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes voice-speaking {
+  0%, 100% {
+    box-shadow: 0 0 0 2px #23a55a;
+  }
+  50% {
+    box-shadow: 0 0 0 4px #23a55a, 0 0 12px rgba(35, 165, 90, 0.4);
+  }
+}
+
+.voice-speaking-ring {
+  animation: voice-speaking 1.2s ease-in-out infinite;
+}
+
+/* Markdown spoiler */
+.spoiler-hidden {
+  background-color: #2b2d31;
+  color: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s ease;
+}
+
+.spoiler-hidden:hover {
+  background-color: #383a40;
+}
+
+.spoiler-revealed {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 4px;
+}

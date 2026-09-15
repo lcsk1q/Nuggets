@@ -1,0 +1,10 @@
+{
+  "name": "Nuggets",
+  "description": "Discord-like conversation website.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
